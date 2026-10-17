@@ -1,0 +1,44 @@
+# Rendered to /etc/nginx/conf.d/default.conf at container start (envsubst fills ${PORT}).
+server_tokens off;
+
+server {
+    listen       ${PORT};
+    server_name  _;
+
+    root   /usr/share/nginx/html;
+    index  index.html;
+
+    include /etc/nginx/conf.d/security-headers.inc;
+
+    gzip on;
+    gzip_comp_level 6;
+    gzip_min_length 1024;
+    gzip_types text/plain text/css application/javascript application/json image/svg+xml application/xml;
+
+    # Content-hashed build output: cache for a year.
+    location /assets/ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        include /etc/nginx/conf.d/security-headers.inc;
+        try_files $uri =404;
+    }
+
+    # Self-hosted fonts (not hashed): a week.
+    location /fonts/ {
+        expires 7d;
+        add_header Cache-Control "public";
+        include /etc/nginx/conf.d/security-headers.inc;
+        try_files $uri =404;
+    }
+
+    # SPA fallback: `/` and `/en` are client routes; unknown paths get the shell and the in-app 404.
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Never cache the HTML shell: it references the latest hashed assets.
+    location = /index.html {
+        add_header Cache-Control "no-cache";
+        include /etc/nginx/conf.d/security-headers.inc;
+    }
+}

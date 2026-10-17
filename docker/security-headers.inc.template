@@ -1,0 +1,17 @@
+# Security headers for every response. Rendered to /etc/nginx/conf.d/security-headers.inc and included
+# from the server block AND every location that calls add_header itself (nginx's add_header is not
+# additive across levels). The `.inc` suffix keeps it out of nginx.conf's `conf.d/*.conf` glob.
+#
+# The landing page makes no network requests and embeds nothing: connect-src 'none', frame-src 'none'.
+# Scripts, styles and fonts are all first-party; the pre-paint guards are files in public/.
+# style-src has no 'unsafe-inline': the only inline styles are React `style` props (Reveal stagger
+# delays), which React applies through the CSSOM, and CSP does not govern CSSOM writes.
+# The "Open dashboard" link is a plain navigation, which the CSP does not restrict.
+add_header Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests" always;
+add_header Strict-Transport-Security "max-age=31536000" always;
+add_header X-Content-Type-Options nosniff always;
+add_header X-Frame-Options DENY always;
+add_header Referrer-Policy strict-origin-when-cross-origin always;
+add_header Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), gamepad=()" always;
+add_header Cross-Origin-Opener-Policy same-origin always;
+add_header Cross-Origin-Resource-Policy same-origin always;
