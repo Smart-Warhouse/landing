@@ -17,6 +17,7 @@ import { ProblemIdea } from '@/sections/ProblemIdea';
 import { Safety } from '@/sections/Safety';
 import { Software } from '@/sections/Software';
 import { Specs } from '@/sections/Specs';
+import { Team } from '@/sections/Team';
 import { TechStack } from '@/sections/TechStack';
 
 export default function Home() {
@@ -53,6 +54,7 @@ export default function Home() {
         <Bom />
         <TechStack />
         <Faq />
+        <Team />
         <FinalCta />
       </main>
       <SiteFooter />

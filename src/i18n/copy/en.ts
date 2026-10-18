@@ -560,6 +560,19 @@ export const en: SiteCopy = {
       },
     ],
   },
+  team: {
+    eyebrow: 'Team',
+    title: 'The team behind the project',
+    intro:
+      'Engineering students building the smart warehouse, from the forklift up to the dashboard.',
+    namePending: 'Name to be added',
+    // TODO(team): names and roles of the other two members — same order as src/content/team.ts.
+    people: [
+      { name: null, role: null },
+      { name: 'Ahmed Imad Tarq', role: null },
+      { name: null, role: null },
+    ],
+  },
   cta: {
     title: 'Follow the warehouse as it is built',
     body: 'The dashboard shows the fleet, the tasks and the events. Open it to see where the project stands.',

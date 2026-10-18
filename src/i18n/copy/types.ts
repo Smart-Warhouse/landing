@@ -162,6 +162,17 @@ export type SiteCopy = {
     groups: T6<string>;
   };
   faq: { eyebrow: string; title: string; items: T7<{ q: string; a: string }> };
+  /**
+   * Team section. `people` follows src/content/team.ts (TEAM_PHOTOS) in order. A null name shows `namePending`;
+   * never put a placeholder or invented name here (copy.test.ts checks it).
+   */
+  team: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    namePending: string;
+    people: T3<{ name: string | null; role: string | null }>;
+  };
   cta: { title: string; body: string; primary: string; secondary: string };
   footer: {
     tagline: string;

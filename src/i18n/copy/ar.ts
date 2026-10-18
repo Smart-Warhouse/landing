@@ -542,6 +542,18 @@ export const ar: SiteCopy = {
       },
     ],
   },
+  team: {
+    eyebrow: 'الفريق',
+    title: 'الفريق وراء المشروع',
+    intro: 'طلاب هندسة يبنون المخزن الذكي من الرافعة حتى لوحة المراقبة.',
+    namePending: 'الاسم يُضاف قريباً',
+    // TODO(team): names and roles of the other two members — same order as src/content/team.ts.
+    people: [
+      { name: null, role: null },
+      { name: 'أحمد عماد طارق', role: null },
+      { name: null, role: null },
+    ],
+  },
   cta: {
     title: 'تابع المخزن وهو يُبنى',
     body: 'لوحة المراقبة تعرض الأسطول والمهام والأحداث. افتحها لترى أين وصل المشروع.',

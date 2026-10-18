@@ -121,7 +121,8 @@ describe('forbidden claims', () => {
     const placeholder = /lorem|ipsum|john|jane|doe|placeholder|example|todo|xxx|فلان|اسم الطالب/i;
     for (const copy of [ar, en]) {
       const { members, supervisor, university, department } = copy.footer.team;
-      for (const value of [...members, supervisor, university, department]) {
+      const people = copy.team.people.flatMap((p) => [p.name, p.role]);
+      for (const value of [...members, supervisor, university, department, ...people]) {
         if (value !== null) expect(placeholder.test(value), value).toBe(false);
       }
     }
