@@ -6,7 +6,7 @@ Huina 1577 Pro forklifts move pallets under a central Fleet Manager + WMS and a 
 
 Static React SPA, Arabic first (RTL) with English at `/en`, light/dark following the OS with a toggle.
 No backend calls, no analytics, no third-party assets. Full design and content notes:
-[`docs/08-landing.md`](../../docs/08-landing.md).
+[`docs/08-landing.md`](https://github.com/Smart-Warhouse/docs/blob/main/08-landing.md).
 
 ## Stack
 
