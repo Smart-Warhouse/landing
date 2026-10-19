@@ -566,11 +566,11 @@ export const en: SiteCopy = {
     intro:
       'Engineering students building the smart warehouse, from the forklift up to the dashboard.',
     namePending: 'Name to be added',
-    // TODO(team): names and roles of the other two members — same order as src/content/team.ts.
+    // Same order as src/content/team.ts (Ahmed in the middle). TODO(team): roles, if wanted.
     people: [
-      { name: null, role: null },
-      { name: 'Ahmed Imad Tarq', role: null },
-      { name: null, role: null },
+      { name: 'Nabaa Ziad Tareq', role: null },
+      { name: 'Ahmed Imad Tareq', role: null },
+      { name: 'Suhib Hassan Ali', role: null },
     ],
   },
   cta: {
@@ -585,7 +585,12 @@ export const en: SiteCopy = {
     sectionsTitle: 'Sections',
     teamTitle: 'Team',
     // TODO(team): add the real team member names, supervisor, university and department.
-    team: { members: [], supervisor: null, university: null, department: null },
+    team: {
+      members: ['Nabaa Ziad Tareq', 'Ahmed Imad Tareq', 'Suhib Hassan Ali'],
+      supervisor: null,
+      university: null,
+      department: null,
+    },
     supervisorLabel: 'Supervised by',
     teamPending: 'Team, supervisor and university names will be added soon.',
     rights: '© 2026 The project team',

@@ -547,11 +547,11 @@ export const ar: SiteCopy = {
     title: 'الفريق وراء المشروع',
     intro: 'طلاب هندسة يبنون المخزن الذكي من الرافعة حتى لوحة المراقبة.',
     namePending: 'الاسم يُضاف قريباً',
-    // TODO(team): names and roles of the other two members — same order as src/content/team.ts.
+    // Same order as src/content/team.ts (Ahmed in the middle). TODO(team): roles, if wanted.
     people: [
-      { name: null, role: null },
+      { name: 'نبأ زياد طارق', role: null },
       { name: 'أحمد عماد طارق', role: null },
-      { name: null, role: null },
+      { name: 'صهيب حسن علي', role: null },
     ],
   },
   cta: {
@@ -566,7 +566,12 @@ export const ar: SiteCopy = {
     sectionsTitle: 'الأقسام',
     teamTitle: 'الفريق',
     // TODO(team): add the real team member names, supervisor, university and department.
-    team: { members: [], supervisor: null, university: null, department: null },
+    team: {
+      members: ['نبأ زياد طارق', 'أحمد عماد طارق', 'صهيب حسن علي'],
+      supervisor: null,
+      university: null,
+      department: null,
+    },
     supervisorLabel: 'بإشراف',
     teamPending: 'أسماء الفريق والمشرف والجامعة تُضاف قريباً.',
     rights: '© 2026 فريق المشروع',

@@ -33,10 +33,19 @@ describe('Team section', () => {
     }
   });
 
-  it('shows "name pending" instead of inventing names for unnamed members', () => {
+  it('shows "name pending" only for members without a name (never an invented name)', () => {
     renderAt('en');
-    expect(screen.getAllByText(en.team.namePending)).toHaveLength(
+    expect(screen.queryAllByText(en.team.namePending)).toHaveLength(
       en.team.people.filter((p) => !p.name).length,
     );
+  });
+
+  it('pairs every photo with its member', () => {
+    expect(TEAM_PHOTOS).toEqual(['/team/nabaa.jpg', '/team/ahmed.jpg', '/team/suhib.jpg']);
+    expect(en.team.people.map((p) => p.name)).toEqual([
+      'Nabaa Ziad Tareq',
+      'Ahmed Imad Tareq',
+      'Suhib Hassan Ali',
+    ]);
   });
 });

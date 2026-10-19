@@ -3,4 +3,4 @@
  * Arabic and English, so Ahmed — index 1 — stays in the middle in both directions. Names and roles live in the
  * copy files (`team.people`, same order); a null name renders `team.namePending`, never an invented name.
  */
-export const TEAM_PHOTOS = ['/team/member-2.jpg', '/team/ahmed.jpg', '/team/member-3.jpg'] as const;
+export const TEAM_PHOTOS = ['/team/nabaa.jpg', '/team/ahmed.jpg', '/team/suhib.jpg'] as const;

@@ -78,10 +78,11 @@ describe('Home', () => {
     expect(screen.getByText(en.specs.footnote)).toBeInTheDocument();
   });
 
-  it('shows the parts total and the team TODO line instead of invented people', () => {
+  it('shows the parts total and the real team names in the footer', () => {
     renderAt('/');
     expect(screen.getByText(new RegExp(formatIqd(BOM_TOTAL_IQD)))).toBeInTheDocument();
-    expect(screen.getByText(ar.footer.teamPending)).toBeInTheDocument();
+    for (const name of ar.footer.team.members)
+      expect(screen.getAllByText(name).length).toBeGreaterThan(0);
   });
 
   it('switches language through the header link', () => {
