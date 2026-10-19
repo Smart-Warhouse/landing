@@ -85,7 +85,7 @@ docker/                    nginx.conf.template, security-headers.inc.template
 - Team member names, supervisor, university and department: `footer.team` in both copy files (the footer
   shows a "will be added" line until then; no placeholder people).
 - Real public domain: `SITE_ORIGIN` in `src/lib/site.ts`, `index.html`, `public/robots.txt`,
-  `public/sitemap.xml` (currently `https://sw-fleet.example`; `seo.test.ts` keeps them in sync).
+  `public/sitemap.xml` (currently `https://landing-production-40b4.up.railway.app`; `seo.test.ts` keeps them in sync).
 - Real photos of the forklift and the scale warehouse (the page uses drawn SVG illustrations only).
 - A 1200×630 raster share image (`og:image`) once there is a real photo.
 - Replace targets with measured results, row by row, as the acceptance tests (T-01…T-16) are run.

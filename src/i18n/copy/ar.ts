@@ -565,11 +565,11 @@ export const ar: SiteCopy = {
     honesty: 'مشروع قيد التنفيذ: كل الأرقام أهداف تصميم وليست نتائج مقاسة.',
     sectionsTitle: 'الأقسام',
     teamTitle: 'الفريق',
-    // TODO(team): add the real team member names, supervisor, university and department.
+    // TODO(team): department, if wanted.
     team: {
       members: ['نبأ زياد طارق', 'أحمد عماد طارق', 'صهيب حسن علي'],
-      supervisor: null,
-      university: null,
+      supervisor: 'أ.د. ماهر يحيى سلوم',
+      university: 'جامعة بغداد',
       department: null,
     },
     supervisorLabel: 'بإشراف',

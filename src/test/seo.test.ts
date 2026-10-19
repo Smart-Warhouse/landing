@@ -32,7 +32,9 @@ describe('SEO files', () => {
       expect(attrs).toMatch(/src="/);
       expect(body.trim()).toBe('');
     }
-    expect(indexHtml).not.toMatch(/fonts\.googleapis|cdn\.|https:\/\/(?!sw-fleet\.example)/);
+    // Only the site's own origin may appear: no third-party fonts, CDNs or other hosts.
+    expect(indexHtml).not.toMatch(/fonts\.googleapis|cdn\./);
+    expect(indexHtml.replaceAll(SITE_ORIGIN, '')).not.toMatch(/https:\/\//);
   });
 });
 

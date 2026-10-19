@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sw-fleet.example/sitemap.xml
+Sitemap: https://landing-production-40b4.up.railway.app/sitemap.xml

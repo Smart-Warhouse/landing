@@ -584,11 +584,11 @@ export const en: SiteCopy = {
     honesty: 'Work in progress: every number is a design target, not a measured result.',
     sectionsTitle: 'Sections',
     teamTitle: 'Team',
-    // TODO(team): add the real team member names, supervisor, university and department.
+    // TODO(team): department, if wanted.
     team: {
       members: ['Nabaa Ziad Tareq', 'Ahmed Imad Tareq', 'Suhib Hassan Ali'],
-      supervisor: null,
-      university: null,
+      supervisor: 'Prof. Dr. Maher Yahya Salloom',
+      university: 'University of Baghdad',
       department: null,
     },
     supervisorLabel: 'Supervised by',
